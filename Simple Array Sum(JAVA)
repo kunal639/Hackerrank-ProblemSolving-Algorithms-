@@ -1,0 +1,17 @@
+// This approach utilizes a single loop to iterate through the array.
+// Inside the loop, it keeps adding each element to the running total variable (sum).
+// This approach is simpler and much faster than the brute force method, especially for larger datasets.
+// Time Complexity: O(N)
+// Space Complexity: O(1)
+
+class Result {
+    public static int simpleArraySum(List<Integer> ar) {
+    // Write your code here
+    int sum=0;
+    for(int i=0; i<ar.size(); i++)
+    {
+        sum += ar.get(i);
+    }
+    return sum;
+    }
+}
