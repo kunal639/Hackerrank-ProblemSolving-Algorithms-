@@ -1,0 +1,14 @@
+// This approach utilizes a single loop to iterate through the array.
+// Inside the loop, it keeps adding each element to a running total variable (sum).
+// This approach is simpler and much faster than the brute force method, especially for larger datasets.
+// Time Complexity: O(N)
+// Space Complexity: O(1)
+
+int simpleArraySum(vector<int> ar) {
+    int sum=0;
+    for(int i=0;i<ar.size();i++)
+    {
+        sum+=ar[i];
+    }
+    return sum;
+}
