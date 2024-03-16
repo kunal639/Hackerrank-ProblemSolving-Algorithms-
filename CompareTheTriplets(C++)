@@ -1,0 +1,26 @@
+// 1. Initialize variables: alice and bob: These variables will store the total points for Alice and Bob, respectively.
+// 2. Iterate through the triplets: Loop through each corresponding element a[i] and b[i] in the triplets a and b.
+// 3. Compare elements and award points:
+// 4. Use a single if-else statement with chained comparisons to check for a[i] > b[i], a[i] < b[i], or a[i] == b[i].
+// * If a[i] > b[i], increment alice by 1.
+// * If a[i] < b[i], increment bob by 1.
+// 5. Return the result:
+
+vector<int> compareTriplets(vector<int> a, vector<int> b) {
+      int cntA=0,cntB=0;
+        for (int i=0; i<a.size(); i++) {
+            if(a[i]>b[i])
+            {
+              cntA++;
+            }
+            else if(a[i]==b[i])
+            {
+              continue;
+            }
+            else
+            {
+              cntB++;
+            }
+        }
+        return {cntA,cntB};
+}
