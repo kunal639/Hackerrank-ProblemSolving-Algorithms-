@@ -1,0 +1,16 @@
+/*
+ * Complete the 'viralAdvertising' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER n as parameter.
+ */
+
+int viralAdvertising(int n) {
+    int sum=0; int x=5;
+    for (int i=1; i<=n; i++) {
+        int t = floor(x/2);
+        sum+= t;
+        x = t*3;
+    }
+    return sum;
+}
