@@ -6,6 +6,7 @@
  *  1. INTEGER_ARRAY ranked
  *  2. INTEGER_ARRAY player
  */
+
 int binarySearch(vector<int>&a,int key)
 {
     int low = 0; int high = a.size()-1;
@@ -35,7 +36,7 @@ int binarySearch(vector<int>&a,int key)
     return -1;
 }
 
-vector<int> climbingLeaderboard(vector<int> ranked, vector<int> player)
+vector<int> climbingLeaderboard(vector<int> ranked, vector<int> player) 
 {
         vector<int> pos(ranked.size()); vector<int> plrrank(player.size());
         pos[0]=1;
@@ -49,7 +50,6 @@ vector<int> climbingLeaderboard(vector<int> ranked, vector<int> player)
                 pos[i] = pos[i-1]+1;
             }
         }
-
         for (int i=0; i<player.size(); i++) {
             int score = player[i];
             if(score>ranked[0])
