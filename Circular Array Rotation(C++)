@@ -1,0 +1,35 @@
+/*
+ * Complete the 'circularArrayRotation' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts following parameters:
+ *  1. INTEGER_ARRAY a
+ *  2. INTEGER k
+ *  3. INTEGER_ARRAY queries
+ */
+    void reverse(vector<int>&a, int start, int end)
+    {
+        while(start<=end)
+        {
+            int temp = a[start];
+            a[start] = a[end];
+            a[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
+vector<int> circularArrayRotation(vector<int> a, int k, vector<int> queries) 
+{
+    int n = a.size();
+    k = k%n;
+    vector<int>temp;
+        reverse(a, 0, n-1);
+        reverse(a, 0, k-1);
+        reverse(a, k, n-1);
+        for (int i=0; i<queries.size(); i++) {
+        int t = queries[i];
+        temp.push_back(a[t]);
+        }
+        return temp;
+}
