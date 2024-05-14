@@ -1,0 +1,30 @@
+/*
+ * Complete the 'permutationEquation' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts INTEGER_ARRAY p as parameter.
+ */
+int linearSearch(vector<int>&a, int target)
+{
+    for (int i=0; i<a.size(); i++)
+    {
+        if(a[i]==target)
+        {
+            return i+1;
+        }
+    }
+    return -1;
+}
+vector<int> permutationEquation(vector<int> p)
+{
+    vector<int>ans;
+    int x = p.size();
+    for (int i=1; i<=x; i++)
+    {
+        int idx = linearSearch(p, i);
+        int res = linearSearch(p, idx);
+        
+        ans.push_back(res);
+    }
+    return ans;
+}
