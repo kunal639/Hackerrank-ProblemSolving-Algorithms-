@@ -1,0 +1,21 @@
+/*
+ * Complete the 'camelcase' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING s as parameter.
+ */
+
+int camelcase(string s)
+{
+    int cnt = 1;
+    for (int i=1; i<s.length(); i++)
+    {
+        char ch = s[i];
+        int x = (int)ch;
+        if(x>=65 && x<=90)
+        {
+            cnt++;
+        }
+    }
+    return cnt;
+}
